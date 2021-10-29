@@ -1,0 +1,328 @@
+/*
+Colors used
+
+background-color: #d3d3d3;
+border-bottom-color: #000;
+button-secondary-color:#4B8;
+button-primary-color:#A05;
+grid-item-background-color:#A9A9A9;
+font-color-button: #FFFFFF;
+visited-link-color: #05676e;
+active-link-color: #489c79;
+color-change-sun-first: #edc655;
+color-change-sun-second: #fcffad;
+color-change-sun-third: #f76414;
+color-change-rectangle-first: #e4d5ea;
+color-change-rectangle-second: #1471cd;
+color-change-rectangle-third: #680226;
+ */
+
+ :root {
+   --background-color: #d3d3d3;
+   --border-bottom-color: #000;
+   --button-secondary-color:#4B8;
+   --button-primary-color:#A05;
+   --grid-item-background-color:#A9A9A9;
+   --font-color-button: #FFFFFF;
+   --visited-link-color: #05676e;
+   --active-link-color: #489c79;
+   --color-change-sun-first: #edc655;
+   --color-change-sun-second: #fcffad;
+   --color-change-sun-third: #f76414;
+   --color-change-rectangle-first: #e4d5ea;
+   --color-change-rectangle-second: #1471cd;
+   --color-change-rectangle-third: #680226;
+   --font-weight-header: 700;
+   --text-decoration-none: none;
+  }
+
+body {
+
+  background-color:  var(--background-color);
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--font-weight-header);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight-header);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--font-weight-header);
+}
+
+a {
+  color: var(--primary-color);
+  }
+
+  a:visited {
+  /* visited link */
+  color: var(--visited-link-color);
+}
+
+  a:hover, a:focus  {
+  /* No underlining when hovering over a link */
+  text-decoration: var(--text-decoration-none);
+}
+
+  a:active {
+  /* selected link */
+  color: var(--active-link-color);
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--button-primary-color);
+  color: var(--font-color-button);
+  text-decoration: var(--text-decoration-none);
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid var(--border-bottom-color);
+}
+
+button:hover, button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: var(--button-secondary-color);
+  color: var(--font-color-button);
+}
+
+.navigation-list__item--active {
+  text-decoration: var(--text-decoration-none);
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  clear: both;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+  }
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 15%;
+  height: 15%;
+  margin-right: 3px;
+
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.what-i-enjoy-list {
+  list-style-type: none;
+}
+
+.what-i-enjoy-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.grid__item {
+  background-color: var(--grid-item-background-color);
+}
+
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+ .grid {
+   display: grid;
+   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   margin: 0;
+
+ }
+ .grid__item {
+   background-color: var(--grid-item-background-color);
+   width: auto;
+   min-height: auto;
+   margin: 0;
+ }
+}
+
+.main-part {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button, button {
+  /* overwrites browser defaults */
+  /* resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* style button */
+  background-color: var(--button-primary-color);
+  color: var(--font-color-button);
+  text-decoration: var(--text-decoration-none);
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid var(--border-bottom-color);
+  transition: 0.2s opacity;
+}
+
+.table {
+  display: none
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--color-change-sun-first);
+  }
+  50% {
+    fill: var(--color-change-sun-second);
+  }
+  100% {
+    fill: var(--color-change-sun-third);
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes rectangle-change {
+  0% {
+    fill: var(--color-change-rectangle-first);
+  }
+  50% {
+    fill: var(--color-change-rectangle-second);
+  }
+  100% {
+    fill: var(--color-change-rectangle-third);
+  }
+}
+
+.rectangle {
+  animation: 4s rectangle-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 15s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 20s cloud-move-reverse infinite alternate linear;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
