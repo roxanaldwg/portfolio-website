@@ -21,6 +21,7 @@ color-change-rectangle-third: #680226;
    --background-color: #d3d3d3;
    --border-bottom-color: #000;
    --button-secondary-color:#4B8;
+   --font-color-body:#2F4F4F;
    --button-primary-color:#A05;
    --grid-item-background-color:#A9A9A9;
    --font-color-button: #FFFFFF;
@@ -39,6 +40,7 @@ color-change-rectangle-third: #680226;
 body {
 
   background-color:  var(--background-color);
+  color: var(--font-color-body);
   font-family: 'Fira Code', monospace;
   font-weight: 400;
   font-size: 16px;
@@ -143,10 +145,11 @@ button:hover, button:focus {
 }
 
 .page-header {
-  border-bottom: 2px solid #A9A9A9;
+  border-bottom: 2px solid var(--border-bottom-color);
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: var(--button-secondary-color);
 }
 
 .page-header__item {
