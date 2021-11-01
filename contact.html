@@ -39,38 +39,43 @@
 
 <main>
 
-  <div>
+  <div class="main-part">
 
     <h1>Contact</h1>
 
   </div>
 
-  <div>
+  <div class="main-part">
       Roxana Ludwig<br>
       name of the street <br>
       xxxxx Berlin<br>
       Deutschland<br>
       <br>
       <br>
-      <a href="mailto:roxana_ludwig@yahoo.de">roxana_ludwig (at) yahoo (dot) de</a><br>
-      <a href="mailto:roxana_ludwig@yahoo.de">Contact me</a>
+      <a href="mailto:roxana_ludwig@yahoo.de">roxana_ludwig(at)yahoo(dot)de</a><br>
+      <br>
+      <a href="mailto:roxana_ludwig@yahoo.de" class="button">Contact me</a>
   </div>
 <br>
 <br>
-  <form action="" method="post">
-    <label class="standard-label" for="contact-email">E-mail (required): </label>
+  <form action="" method="post" id="contact-form">
+    <label class="standard-label" for="contact-email">E-mail (required):
+    <br>
+    </label>
     <input type="email" id="contact-email" required>
     <br>
     <br>
     <label class="standard-label" for="contact-telephone">Telephone: </label>
+    <br>
     <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
     <br>
     <br>
     <label class="standard-label" for="contact-message">Message (max 240 characters): </label>
+    <br>
     <textarea maxlength="240" id="contact-message"  required></textarea>
     <br>
     <br>
-    <input type="submit" value="Send message">
+    <input type="submit" class= button value="Send message">
   </form>
 
 </main>
