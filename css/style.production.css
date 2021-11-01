@@ -1,14 +1,3 @@
-  /* Once you’re done with the initial version of your website at the end of this course, we recommend doing the following:
-
-    1. Run your transpiled CSS through the autoprefixer (or any other postprocessor you decide to use).
-
-    2.Create a new CSS file called “style.production.css” and paste the output from the autoprefixer into this file.
-
-    3. Update your links in the header of the CSS file to the new “style.production.css” file.
-
-    4. Make sure you keep a copy of your original “styles.css” file. If you want to make any changes later, it’s best to make it in this file and repeat the process again.
- */
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
@@ -16,9 +5,29 @@
 * Browsers: last 4 version
 */
 
+/*
+Colors used
+
+background-color: #d3d3d3;
+border-bottom-color: #000;
+button-secondary-color:#4B8;
+button-primary-color:#A05;
+grid-item-background-color:#A9A9A9;
+font-color-button: #FFFFFF;
+visited-link-color: #05676e;
+active-link-color: #489c79;
+color-change-sun-first: #edc655;
+color-change-sun-second: #fcffad;
+color-change-sun-third: #f76414;
+color-change-rectangle-first: #e4d5ea;
+color-change-rectangle-second: #1471cd;
+color-change-rectangle-third: #680226;
+ */
+
 body {
 
   background-color:  #d3d3d3;
+  color: #2F4F4F;
   font-family: 'Fira Code', monospace;
   font-weight: 400;
   font-size: 16px;
@@ -134,11 +143,13 @@ button:hover, button:focus {
 }
 
 .page-header {
+  border-bottom: 2px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: #4B8;
 }
 
 .page-header__item {
