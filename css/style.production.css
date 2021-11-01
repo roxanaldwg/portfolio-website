@@ -85,8 +85,6 @@ button {
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid #000;
 }
 
 button:hover, button:focus {
@@ -143,7 +141,6 @@ button:hover, button:focus {
 }
 
 .page-header {
-  border-bottom: 2px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +238,7 @@ button:hover, button:focus {
   padding: 10px;
   border-radius: 3px;
   /* width of the border, type, color */
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid;
   -webkit-transition: 0.2s opacity;
   -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
@@ -261,7 +258,7 @@ button {
   padding: 10px;
   border-radius: 3px;
   /* width of the border, type, color */
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid;
   -webkit-transition: 0.2s opacity;
   -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
