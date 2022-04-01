@@ -6,13 +6,6 @@
 */
 
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
-/*
 Colors used
 
 background-color: #d3d3d3;
@@ -57,7 +50,7 @@ h3 {
 }
 
 a {
-  color: #05676e;
+  color: undefined;
   }
 
   a:visited {
@@ -67,14 +60,12 @@ a {
 
   a:hover  {
   /* No underlining when hovering over a link */
-  -webkit-text-decoration: none;
-          text-decoration: none;
+  text-decoration: none;
 }
 
   a:focus  {
   /* No underlining when hovering over a link */
-  -webkit-text-decoration: none;
-          text-decoration: none;
+  text-decoration: none;
 }
 
   a:active {
@@ -90,8 +81,7 @@ button {
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: #A05;
   color: #FFFFFF;
-  -webkit-text-decoration: none;
-          text-decoration: none;
+  text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
@@ -110,8 +100,7 @@ button:hover, button:focus {
 }
 
 .navigation-list__item--active {
-  -webkit-text-decoration: none;
-          text-decoration: none;
+  text-decoration: none;
 }
 
 .profile__portrait {
@@ -243,6 +232,7 @@ button:hover, button:focus {
 }
 
 
+
 .button {
   /* overwrites browser defaults */
   /* resets the border */
@@ -253,8 +243,7 @@ button:hover, button:focus {
   /* style button */
   background-color: #A05;
   color: #FFFFFF;
-  -webkit-text-decoration: none;
-          text-decoration: none;
+  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   /* width of the border, type, color */
@@ -263,6 +252,7 @@ button:hover, button:focus {
   -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
+
 
 
 button {
@@ -275,8 +265,7 @@ button {
   /* style button */
   background-color: #A05;
   color: #FFFFFF;
-  -webkit-text-decoration: none;
-          text-decoration: none;
+  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   /* width of the border, type, color */
@@ -298,6 +287,10 @@ button:focus,
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
+}
+
+.button:visited {
+  color: #FFFFFF;
 }
 
 @-webkit-keyframes color-change {
